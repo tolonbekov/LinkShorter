@@ -1,0 +1,5 @@
+
+<servlet-mapping>
+<servlet-name>com.danil.RestApp</servlet-name>
+<url-pattern>/*</url-pattern>
+</servlet-mapping>
