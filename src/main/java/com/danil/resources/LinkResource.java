@@ -18,22 +18,7 @@ public class LinkResource {
 
     private static final StringBuilder result = new StringBuilder();
 
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    @Path("")
-    public Response getAllUrl() {
-        if (links.isEmpty()) {
-            return Response.status(Response.Status.UNAUTHORIZED).build();
-        } else {
-            for (String key : links.keySet()) {
-                //System.out.println(key + "=" + links.get(key));
-                result.append(key + "=" + links.get(key));
-            }
-            return Response.ok(result).build();
-        }
 
-
-    }
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
@@ -60,3 +45,20 @@ public class LinkResource {
 
 
 }
+
+/*@GET
+    @Produces(MediaType.TEXT_PLAIN)
+    @Path("")
+    public Response getAllUrl() {
+        if (links.isEmpty()) {
+            return Response.status(Response.Status.UNAUTHORIZED).build();
+        } else {
+            for (String key : links.keySet()) {
+                //System.out.println(key + "=" + links.get(key));
+                result.append(key + "=" + links.get(key));
+            }
+            return Response.ok(result).build();
+        }
+
+
+    }*/
