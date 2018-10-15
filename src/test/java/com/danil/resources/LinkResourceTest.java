@@ -56,7 +56,7 @@ public class LinkResourceTest {
     }
 
     private static HttpServer startServer() {
-        final ResourceConfig rc = new ResourceConfig().packages("io.hexlet.java.links.resources");
+        final ResourceConfig rc = new ResourceConfig().packages("com.danil.resources");
 
         return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
     }
